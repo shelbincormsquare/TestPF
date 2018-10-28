@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1AA198EC-963B-48C4-AC3F-80DA732BC93B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{44280EB6-83C1-4817-ABB6-FA1B699FC4CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupCakeWpf.UI", "src\CupCakeWpf.UI\CupCakeWpf.UI.csproj", "{A3FC2323-9F05-44E5-9B4E-E04617AF195A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3FC2323-9F05-44E5-9B4E-E04617AF195A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FC2323-9F05-44E5-9B4E-E04617AF195A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FC2323-9F05-44E5-9B4E-E04617AF195A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FC2323-9F05-44E5-9B4E-E04617AF195A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3FC2323-9F05-44E5-9B4E-E04617AF195A} = {1AA198EC-963B-48C4-AC3F-80DA732BC93B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2C305E7-2EC0-4236-BD25-294C9E68A645}
+	EndGlobalSection
+EndGlobal
