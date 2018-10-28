@@ -1,15 +1,15 @@
-﻿using MahApps.Metro.Controls;
+﻿using CupCakeWpf.UI.ViewModels;
+using MahApps.Metro.Controls;
 
 namespace CupCakeWpf.UI
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public MainWindow()
+        private MainViewModel _viewModel;
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
+            _viewModel = viewModel;
         }
     }
 }

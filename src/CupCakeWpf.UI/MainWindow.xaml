@@ -9,6 +9,6 @@
                       mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <view:LoginView/>
+        <view:LoginView DataContext="{Binding LoginViewModel}"/>
     </Grid>
 </Controls:MetroWindow>
