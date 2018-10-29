@@ -10,6 +10,7 @@ namespace CupCakeWpf.UI
         {
             InitializeComponent();
             _viewModel = viewModel;
+            DataContext = _viewModel;
         }
     }
 }
