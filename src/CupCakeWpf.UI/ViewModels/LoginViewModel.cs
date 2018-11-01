@@ -1,6 +1,7 @@
 ﻿using CupCakeWpf.UI.ViewModels.Interfaces;
 using Prism.Commands;
 using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace CupCakeWpf.UI.ViewModels
@@ -35,7 +36,7 @@ namespace CupCakeWpf.UI.ViewModels
 
         private void OnLoginExecute()
         {
-            throw new NotImplementedException();
+            MessageBox.Show(Email + "  " + Password);
         }
     }
 }
