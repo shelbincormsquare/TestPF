@@ -5,10 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CupCakeWpf.UI"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:view="clr-namespace:CupCakeWpf.UI.Views"
-                      mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:view="clr-namespace:CupCakeWpf.UI.Views" mc:Ignorable="d"
+        Title="CupCake - Desktop Client" Height="450" Width="800"
+                      TitleCaps="False"
+                      ResizeMode="CanResizeWithGrip"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      SaveWindowPosition="True"
+                      RightWindowCommandsOverlayBehavior="Never"
+                      >
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button>Settings</Button>
+            <Button >Publish</Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
     <Grid>
-        <view:LoginView DataContext="{Binding LoginViewModel}"/>
+        <!--<view:LoginView DataContext="{Binding LoginViewModel}"/>-->
+        <!--<view:DashboardView DataContext="{Binding DashboardViewModel}"/>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Controls:MetroAnimatedTabControl>
+            <Controls:MetroTabItem Header="Create Invoice">
+                <view:InvoiceEditorView DataContext="{Binding InvoiceEditorViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="matches">
+                <view:LoginView DataContext="{Binding LoginViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="stats">
+                <view:DashboardView DataContext="{Binding DashboardViewModel}"/>
+            </Controls:MetroTabItem>
+          
+        </Controls:MetroAnimatedTabControl>
+
+
+        <StatusBar Grid.Row="1">
+            <StatusBarItem>ScoreKeeper</StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+            <StatusBarItem>Some status message</StatusBarItem>
+        </StatusBar>
     </Grid>
 </Controls:MetroWindow>
