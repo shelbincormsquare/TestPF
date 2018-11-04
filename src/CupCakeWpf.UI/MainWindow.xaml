@@ -13,7 +13,8 @@
                       SaveWindowPosition="True"
                       RightWindowCommandsOverlayBehavior="Never"
                       >
-
+  
+    
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button>Settings</Button>

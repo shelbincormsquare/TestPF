@@ -16,7 +16,8 @@ namespace CupCakeWpf.UI.StartUp
             builder.RegisterType<MainWindow>().AsSelf();
             builder.RegisterType<MainViewModel>().AsSelf();
             builder.RegisterType<LoginViewModel>().As<ILoginViewModel>();
-            
+            builder.RegisterType<InvoiceEditorViewModel>().As<IInvoiceEditorViewModel>();
+
             return builder.Build();
         }
     }

@@ -7,19 +7,17 @@
              xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <!--<UserControl.Resources>
+        <Style x:Key = "textBox" TargetType = "TextBox">
+            <Setter Property = "MinWidth" Value = "150" />
+        </Style>
+    </UserControl.Resources>-->
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -27,13 +25,50 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
 
-        <Label Margin="5" Grid.Column="2" Grid.Row="2">Customer Name:</Label>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center">Bill No:</Label>
+        
+        <Label Grid.Row="2" Grid.Column="1">Bill No: </Label>
+        <TextBox Grid.Row="2" Grid.Column="2" MinWidth="150" controls:TextBoxHelper.Watermark="Bill Number"></TextBox>
+
+        <Label Grid.Row="2" Grid.Column="3">Customer No:</Label>
+        <TextBox Grid.Row="2" Grid.Column="4" MinWidth="150" controls:TextBoxHelper.Watermark="Customer"></TextBox>
+
+        <Label Grid.Row="3" Grid.Column="1">Date :</Label>
+        <TextBox Grid.Row="3" Grid.Column="2" MinWidth="150" controls:TextBoxHelper.Watermark="Date"></TextBox>
+
+        <Label Grid.Row="3" Grid.Column="3">Emp Name:</Label>
+        <TextBox Grid.Row="3" Grid.Column="4" MinWidth="150" controls:TextBoxHelper.Watermark="Emp Name"></TextBox>
+
+        <DataGrid  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" ItemsSource="{Binding InvoiceItems}"
+          AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Price" Binding="{Binding Quantity}" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding UnitPrice}" />
+                <DataGridTextColumn Header="Tax" Binding="{Binding TaxRate}" />
+                <DataGridTextColumn Header="Total" Binding="{Binding TotalAmount}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center">Come Again</Label>
+
+
+     
+
+        <!--<Label Margin="5" Grid.Column="2" Grid.Row="2">Customer Name:</Label>
         <TextBox controls:TextBoxHelper.Watermark="Customer Name"
-                 Margin="5" Grid.Column="3" Grid.Row="2"></TextBox>
+                 Margin="5" Grid.Column="3" Grid.Row="2"></TextBox>-->
 
 
     </Grid>
-
-
 </UserControl>

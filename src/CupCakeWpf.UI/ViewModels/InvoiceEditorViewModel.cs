@@ -2,8 +2,24 @@
 
 namespace CupCakeWpf.UI.ViewModels
 {
-    public class InvoiceEditorViewModel : ViewModelBase
+    public class InvoiceEditorViewModel : ViewModelBase, IInvoiceEditorViewModel
     {
+        public InvoiceEditorViewModel()
+        {
+            InvoiceItems = getInvoiceItems();
+        }
+
+        private List<InvoiceItem> getInvoiceItems()
+        {
+            return new List<InvoiceItem>()
+            {
+                 new InvoiceItem(){ Name ="Name1", Quantity =10, TaxRate =8, UnitPrice = 22, TotalAmount = 2200 },
+                 new InvoiceItem(){ Name ="Name1", Quantity =10, TaxRate =8, UnitPrice = 22, TotalAmount = 2200 },
+                 new InvoiceItem(){ Name ="Name1", Quantity =10, TaxRate =8, UnitPrice = 22, TotalAmount = 2200 }
+            };
+        }
+
+        public List<InvoiceItem> InvoiceItems { get; set; }
 
     }
 

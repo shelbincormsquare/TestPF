@@ -73,6 +73,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="StartUp\Bootstrapper.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\IInvoiceEditorViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\ILoginViewModel.cs" />
     <Compile Include="ViewModels\InvoiceEditorViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
