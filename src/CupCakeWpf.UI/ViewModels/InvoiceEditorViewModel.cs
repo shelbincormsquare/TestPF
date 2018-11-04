@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CupCakeWpf.UI.ViewModels.Interfaces;
+using System.Collections.Generic;
 
 namespace CupCakeWpf.UI.ViewModels
 {

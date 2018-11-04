@@ -71,11 +71,18 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\User.cs" />
+    <Compile Include="Services\ItemRepository.cs" />
     <Compile Include="StartUp\Bootstrapper.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
-    <Compile Include="ViewModels\IInvoiceEditorViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IItemsViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IInvoiceEditorViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IItemEditorViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IItemListViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\ILoginViewModel.cs" />
     <Compile Include="ViewModels\InvoiceEditorViewModel.cs" />
+    <Compile Include="ViewModels\ItemEditorViewModel.cs" />
+    <Compile Include="ViewModels\ItemListViewModel.cs" />
+    <Compile Include="ViewModels\ItemsViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
@@ -84,6 +91,15 @@
     </Compile>
     <Compile Include="Views\InvoiceEditorView.xaml.cs">
       <DependentUpon>InvoiceEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemEditorView.xaml.cs">
+      <DependentUpon>ItemEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemListView.xaml.cs">
+      <DependentUpon>ItemListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemsView.xaml.cs">
+      <DependentUpon>ItemsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -105,6 +121,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\InvoiceEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ItemEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ItemListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ItemsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

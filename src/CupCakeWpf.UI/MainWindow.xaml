@@ -31,6 +31,12 @@
         </Grid.RowDefinitions>
 
         <Controls:MetroAnimatedTabControl>
+            <Controls:MetroTabItem Header="Items">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="Item1">
+                <view:ItemEditorView DataContext="{Binding ItemEditorViewModel}"/>
+            </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Create Invoice">
                 <view:InvoiceEditorView DataContext="{Binding InvoiceEditorViewModel}"/>
             </Controls:MetroTabItem>

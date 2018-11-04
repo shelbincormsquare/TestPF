@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CupCakeWpf.UI.ViewModels
+namespace CupCakeWpf.UI.ViewModels.Interfaces
 {
     public interface IInvoiceEditorViewModel
     {

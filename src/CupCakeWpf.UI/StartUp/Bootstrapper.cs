@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CupCakeWpf.UI.Services;
 using CupCakeWpf.UI.ViewModels;
 using CupCakeWpf.UI.ViewModels.Interfaces;
 
@@ -17,6 +18,10 @@ namespace CupCakeWpf.UI.StartUp
             builder.RegisterType<MainViewModel>().AsSelf();
             builder.RegisterType<LoginViewModel>().As<ILoginViewModel>();
             builder.RegisterType<InvoiceEditorViewModel>().As<IInvoiceEditorViewModel>();
+            builder.RegisterType<ItemRepository>().As<IItemRepository>();
+            builder.RegisterType<ItemListViewModel>().As<IItemListViewModel>();
+            builder.RegisterType<ItemEditorViewModel>().As<IItemEditorViewModel>();
+            builder.RegisterType<ItemsViewModel>().As<IItemsViewModel>();
 
             return builder.Build();
         }
