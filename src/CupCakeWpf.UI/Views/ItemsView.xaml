@@ -7,10 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <!--<view:ItemEditView DataContext="{Binding ItemsViewModel}"/>-->
-
-        <!--<ContentControl DataContext="{Binding ItemListViewModel}"/>-->
-
-        <ContentPresenter Content="{Binding ItemListView}" DataContext="{Binding ItemListViewModel}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <local:ItemListView Grid.Row="1" Grid.Column="0" DataContext="{Binding ItemListViewModel}"/>
+        <local:ItemDetailsView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" DataContext="{Binding ItemDetailsViewModel}"/>
     </Grid>
 </UserControl>

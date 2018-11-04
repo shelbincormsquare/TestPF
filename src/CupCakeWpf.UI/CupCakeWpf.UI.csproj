@@ -48,6 +48,7 @@
       <HintPath>..\..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -70,30 +71,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Services\ItemRepository.cs" />
-    <Compile Include="StartUp\Bootstrapper.cs" />
-    <Compile Include="ViewModels\DashboardViewModel.cs" />
-    <Compile Include="ViewModels\Interfaces\IItemsViewModel.cs" />
-    <Compile Include="ViewModels\Interfaces\IInvoiceEditorViewModel.cs" />
-    <Compile Include="ViewModels\Interfaces\IItemEditorViewModel.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\LookupItem.cs" />
+    <Compile Include="Services\Interfaces\IItemService.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="ViewModels\Interfaces\IItemDetailsViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IItemListViewModel.cs" />
-    <Compile Include="ViewModels\Interfaces\ILoginViewModel.cs" />
-    <Compile Include="ViewModels\InvoiceEditorViewModel.cs" />
-    <Compile Include="ViewModels\ItemEditorViewModel.cs" />
+    <Compile Include="ViewModels\ItemDetailsViewModel.cs" />
     <Compile Include="ViewModels\ItemListViewModel.cs" />
-    <Compile Include="ViewModels\ItemsViewModel.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\DashboardView.xaml.cs">
-      <DependentUpon>DashboardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\InvoiceEditorView.xaml.cs">
-      <DependentUpon>InvoiceEditorView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ItemEditorView.xaml.cs">
-      <DependentUpon>ItemEditorView.xaml</DependentUpon>
+    <Compile Include="Views\ItemDetailsView.xaml.cs">
+      <DependentUpon>ItemDetailsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ItemListView.xaml.cs">
       <DependentUpon>ItemListView.xaml</DependentUpon>
@@ -101,9 +91,9 @@
     <Compile Include="Views\ItemsView.xaml.cs">
       <DependentUpon>ItemsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\LoginView.xaml.cs">
-      <DependentUpon>LoginView.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Wrappers\ItemWrapper.cs" />
+    <Compile Include="Wrappers\ModelWrapper.cs" />
+    <Compile Include="Wrappers\NotifyDataErrorInfoBase.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -116,15 +106,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\DashboardView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\InvoiceEditorView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\ItemEditorView.xaml">
+    <Page Include="Views\ItemDetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,10 +115,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ItemsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

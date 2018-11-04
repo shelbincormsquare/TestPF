@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace CupCakeWpf.UI.Views
 {
     /// <summary>
-    /// Interaction logic for InvoiceEditorView.xaml
+    /// Interaction logic for ItemDetailsView.xaml
     /// </summary>
-    public partial class InvoiceEditorView : UserControl
+    public partial class ItemDetailsView : UserControl
     {
-        public InvoiceEditorView()
+        public ItemDetailsView()
         {
             InitializeComponent();
         }

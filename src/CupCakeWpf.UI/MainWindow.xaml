@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CupCakeWpf.UI"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:view="clr-namespace:CupCakeWpf.UI.Views" mc:Ignorable="d"
-        Title="CupCake - Desktop Client" Height="450" Width="800"
+                      xmlns:view="clr-namespace:CupCakeWpf.UI.Views"
+                      Title="CupCake - Desktop Client" Height="700" Width="1000"
                       TitleCaps="False"
                       ResizeMode="CanResizeWithGrip"
                       GlowBrush="{DynamicResource AccentColorBrush}"
@@ -23,28 +23,28 @@
     </Controls:MetroWindow.RightWindowCommands>
 
     <Grid>
-        <!--<view:LoginView DataContext="{Binding LoginViewModel}"/>-->
-        <!--<view:DashboardView DataContext="{Binding DashboardViewModel}"/>-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Controls:MetroAnimatedTabControl>
+
+           
             <Controls:MetroTabItem Header="Items">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="Item1">
-                <view:ItemEditorView DataContext="{Binding ItemEditorViewModel}"/>
+            <Controls:MetroTabItem Header="Users">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="Create Invoice">
-                <view:InvoiceEditorView DataContext="{Binding InvoiceEditorViewModel}"/>
+            <Controls:MetroTabItem Header="Invoices">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="matches">
-                <view:LoginView DataContext="{Binding LoginViewModel}"/>
+            <Controls:MetroTabItem Header="KOTS">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="stats">
-                <view:DashboardView DataContext="{Binding DashboardViewModel}"/>
+            <Controls:MetroTabItem Header="Reports">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
           
         </Controls:MetroAnimatedTabControl>

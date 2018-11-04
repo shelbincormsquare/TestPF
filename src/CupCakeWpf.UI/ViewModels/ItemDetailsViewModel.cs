@@ -2,7 +2,7 @@
 
 namespace CupCakeWpf.UI.ViewModels
 {
-    public class ItemListViewModel : IItemListViewModel
+    public class ItemDetailsViewModel: IItemDetailsViewModel
     {
     }
 }

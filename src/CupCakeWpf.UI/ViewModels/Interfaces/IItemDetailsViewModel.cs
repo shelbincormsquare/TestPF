@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CupCakeWpf.UI.ViewModels
+namespace CupCakeWpf.UI.ViewModels.Interfaces
 {
-    public class DashboardViewModel
+    public interface IItemDetailsViewModel
     {
     }
 }
