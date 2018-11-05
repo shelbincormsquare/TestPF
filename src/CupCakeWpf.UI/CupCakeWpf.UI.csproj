@@ -78,8 +78,10 @@
     <Compile Include="Services\ItemService.cs" />
     <Compile Include="ViewModels\Interfaces\IItemDetailsViewModel.cs" />
     <Compile Include="ViewModels\Interfaces\IItemListViewModel.cs" />
+    <Compile Include="ViewModels\Interfaces\IItemsViewModel.cs" />
     <Compile Include="ViewModels\ItemDetailsViewModel.cs" />
     <Compile Include="ViewModels\ItemListViewModel.cs" />
+    <Compile Include="ViewModels\ItemsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\ItemDetailsView.xaml.cs">

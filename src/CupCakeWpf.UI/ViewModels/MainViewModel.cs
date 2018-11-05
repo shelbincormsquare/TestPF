@@ -1,9 +1,13 @@
-﻿namespace CupCakeWpf.UI.ViewModels
+﻿using CupCakeWpf.UI.ViewModels.Interfaces;
+
+namespace CupCakeWpf.UI.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public MainViewModel()
+        public MainViewModel(IItemsViewModel itemsViewModel)
         {
+            ItemsViewModel = itemsViewModel;
         }
+        public IItemsViewModel ItemsViewModel { get; }
     }
 }
