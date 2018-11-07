@@ -13,6 +13,10 @@ namespace Donut.Infrastructure.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                        CreatedBy = c.Int(nullable: false),
+                        CreatedDate = c.DateTime(nullable: false),
+                        UpdatedBy = c.Int(),
+                        UpdatedDate = c.DateTime(),
                     })
                 .PrimaryKey(t => t.Id);
             

@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistence\Migrations\201811071712508_InitialDb.cs" />
-    <Compile Include="Persistence\Migrations\201811071712508_InitialDb.Designer.cs">
-      <DependentUpon>201811071712508_InitialDb.cs</DependentUpon>
+    <Compile Include="Persistence\Migrations\201811071812038_InitialDb.cs" />
+    <Compile Include="Persistence\Migrations\201811071812038_InitialDb.Designer.cs">
+      <DependentUpon>201811071812038_InitialDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistence\Migrations\Configuration.cs" />
     <Compile Include="Persistence\AppDbContext.cs" />
@@ -70,12 +70,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Persistence\Migrations\201811071712508_InitialDb.resx">
-      <DependentUpon>201811071712508_InitialDb.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Persistence\EntityConfigurations\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistence\EntityConfigurations\" />
+    <EmbeddedResource Include="Persistence\Migrations\201811071812038_InitialDb.resx">
+      <DependentUpon>201811071812038_InitialDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

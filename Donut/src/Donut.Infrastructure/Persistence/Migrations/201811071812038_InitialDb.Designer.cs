@@ -13,7 +13,7 @@ namespace Donut.Infrastructure.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201811071712508_InitialDb"; }
+            get { return "201811071812038_InitialDb"; }
         }
         
         string IMigrationMetadata.Source

@@ -6,8 +6,59 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Donut.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+                  Title="Donut " Height="700" Width="1000"
+                      TitleCaps="False"
+                      ResizeMode="CanResizeWithGrip"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      SaveWindowPosition="True"
+                      RightWindowCommandsOverlayBehavior="Never">
+
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button>Settings</Button>
+            <Button >Publish</Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Controls:MetroAnimatedTabControl>
+
+
+            <Controls:MetroTabItem Header="Items">
+                <ListBox Margin="2"
+                         BorderThickness="1"
+                         DisplayMemberPath="Name"
+                         ItemsSource="{Binding Items}"
+                         SelectedIndex="0"
+                         Style="{StaticResource VirtualisedMetroListBox}" />
+            </Controls:MetroTabItem>
+            <!--<Controls:MetroTabItem Header="Users">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="Invoices">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="KOTS">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+            </Controls:MetroTabItem>
+            <Controls:MetroTabItem Header="Reports">
+                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+            </Controls:MetroTabItem>-->
+
+        </Controls:MetroAnimatedTabControl>
+
+
+        <StatusBar Grid.Row="1">
+            <StatusBarItem>ScoreKeeper</StatusBarItem>
+            <Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
+            <StatusBarItem>Some status message</StatusBarItem>
+        </StatusBar>
     </Grid>
-    </Controls:MetroWindow>
+</Controls:MetroWindow>
