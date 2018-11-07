@@ -20,7 +20,21 @@ namespace Donut.UI.ViewModels
         public MainViewModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            ProcessDate = "dsd";
             //LoadAsync();
+        }
+
+        private string _processDate;
+        public string ProcessDate
+        {
+            get { return _processDate; }
+
+            set
+            {
+                _processDate = value;
+                OnPropertyChanged("ProcessDate");
+            }
+
         }
 
         public async Task LoadAsync()

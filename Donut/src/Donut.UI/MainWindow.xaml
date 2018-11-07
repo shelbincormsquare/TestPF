@@ -27,8 +27,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <TextBox Name="txtDate" Width="200" Text="{Binding ProcessDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Controls:MetroAnimatedTabControl>
+        <!--<Controls:MetroAnimatedTabControl>
 
 
             <Controls:MetroTabItem Header="Items">
@@ -39,7 +40,7 @@
                          SelectedIndex="0"
                          Style="{StaticResource VirtualisedMetroListBox}" />
             </Controls:MetroTabItem>
-            <!--<Controls:MetroTabItem Header="Users">
+            --><!--<Controls:MetroTabItem Header="Users">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Invoices">
@@ -50,9 +51,9 @@
             </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Reports">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
-            </Controls:MetroTabItem>-->
+            </Controls:MetroTabItem>--><!--
 
-        </Controls:MetroAnimatedTabControl>
+        </Controls:MetroAnimatedTabControl>-->
 
 
         <StatusBar Grid.Row="1">
