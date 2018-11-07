@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using Donut.UI.ViewModels;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,12 @@ namespace Donut.UI
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
-        public MainWindow()
+       private MainViewModel _viewModel;
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
+            _viewModel = viewModel;
+            DataContext = _viewModel;
         }
     }
 }
