@@ -34,7 +34,7 @@
             <Controls:MetroTabItem Header="Items">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
-            <Controls:MetroTabItem Header="Users">
+            <!--<Controls:MetroTabItem Header="Users">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
             </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Invoices">
@@ -45,7 +45,7 @@
             </Controls:MetroTabItem>
             <Controls:MetroTabItem Header="Reports">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
-            </Controls:MetroTabItem>
+            </Controls:MetroTabItem>-->
           
         </Controls:MetroAnimatedTabControl>
 

@@ -1,5 +1,9 @@
-﻿using System;
+﻿using CupCakeWpf.UI.Models;
+using CupCakeWpf.UI.Services;
+using CupCakeWpf.UI.Services.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +24,21 @@ namespace CupCakeWpf.UI.Views
     /// </summary>
     public partial class ItemListView : UserControl
     {
+        private IItemService _itemService;
         public ItemListView()
         {
             InitializeComponent();
+            _itemService = new ItemService();
+            Items = new ObservableCollection<Item>();
+            var items = _itemService.ToList();
+            foreach (var item in items)
+            {
+                Items.Add(item);
+            }
         }
+
+        public ObservableCollection<Item> Items { get; set; }
+
+
     }
 }

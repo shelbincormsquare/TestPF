@@ -6,12 +6,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <GroupBox Header="Friends" >
+        <!--<GroupBox Header="Friends" >
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                   HorizontalScrollBarVisibility="Auto">
                 <ItemsControl ItemsSource="{Binding Items}"
                       Margin="10"/>
             </ScrollViewer>
-        </GroupBox>
+        </GroupBox>-->
+        <ListBox Margin="2"
+                         BorderThickness="1"
+                         DisplayMemberPath="Name"
+                         ItemsSource="{Binding Items}"
+                         SelectedIndex="0"
+                         Style="{StaticResource VirtualisedMetroListBox}" />
     </Grid>
 </UserControl>
