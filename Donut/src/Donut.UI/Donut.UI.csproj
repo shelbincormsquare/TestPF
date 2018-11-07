@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Donut.Core\Donut.Core.csproj">
+      <Project>{c08d8ddf-8adf-4901-9dbc-68b27614c68f}</Project>
+      <Name>Donut.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donut.Infrastructure\Donut.Infrastructure.csproj">
+      <Project>{0e2b8a78-3eb8-4f07-948d-a04ab63c15e4}</Project>
+      <Name>Donut.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
