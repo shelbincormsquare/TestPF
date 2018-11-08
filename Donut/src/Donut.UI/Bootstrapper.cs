@@ -3,6 +3,7 @@ using Donut.Core.Interfaces.Repositories;
 using Donut.Infrastructure.Persistence;
 using Donut.Infrastructure.Repositories;
 using Donut.UI.ViewModels;
+using Prism.Events;
 
 namespace Donut.UI
 {
@@ -10,12 +11,14 @@ namespace Donut.UI
     {
         public IContainer BootStrap()
         {
-            var builder = new ContainerBuilder(); 
+            var builder = new ContainerBuilder();
+            builder.RegisterType<EventAggregator>().As<IEventAggregator>().SingleInstance();
             builder.RegisterType<MainWindow>().AsSelf();
             builder.RegisterType<MainViewModel>().AsSelf();
             builder.RegisterType<AppDbContext>().AsSelf();
+
+            builder.RegisterType<ItemNavigationViewModel>().As<IItemNavigationViewModel>();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
-            //builder.RegisterType<ItemListViewModel>().As<IItemListViewModel>();
             //builder.RegisterType<ItemsViewModel>().As<IItemsViewModel>(); 
 
             return builder.Build();
