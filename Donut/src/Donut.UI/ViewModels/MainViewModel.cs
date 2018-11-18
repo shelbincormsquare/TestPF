@@ -12,11 +12,24 @@ namespace Donut.UI.ViewModels
         public MainViewModel(IItemNavigationViewModel itemNavigationViewModel)
         {
             NavigationViewModel = itemNavigationViewModel;
+            ProcessDate = "dsadsad";
         }
 
         public async Task LoadAsync()
         {
             await NavigationViewModel.LoadAsync();
         }
+
+        private string _processDate;
+        public string ProcessDate
+        {
+            get { return _processDate; }
+            set
+            {
+                _processDate = value;
+                OnPropertyChanged();
+            }
+        }
+
     }
 }

@@ -32,7 +32,7 @@
 
            
             <Controls:MetroTabItem Header="Items">
-                <view:ItemsView DataContext="{Binding ItemsViewModel}"/>
+                <view:ItemListView DataContext="{Binding ItemListViewModel}"/>
             </Controls:MetroTabItem>
             <!--<Controls:MetroTabItem Header="Users">
                 <view:ItemsView DataContext="{Binding ItemsViewModel}"/>

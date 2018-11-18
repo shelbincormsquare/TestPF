@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:local="clr-namespace:Donut.UI"
     xmlns:view="clr-namespace:Donut.UI.Views"
     mc:Ignorable="d"
                   Title="Donut " Height="700" Width="1000"
@@ -28,15 +29,17 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <view:ItemNavigationView DataContext="{Binding ItemNavigationViewModel}"/>
-     
+
+        <view:ItemNavigationView DataContext="{Binding ItemNavigationViewModel}"></view:ItemNavigationView>
+        <!--<TextBox Width="200" Text="{Binding ProcessDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+
 
         <!--<Controls:MetroAnimatedTabControl>
             <Controls:MetroTabItem Header="Items">
             </Controls:MetroTabItem>
-        </Controls:MetroAnimatedTabControl>--> 
-        
-        
+        </Controls:MetroAnimatedTabControl>-->
+
+
         <StatusBar Grid.Row="1">
             <StatusBarItem>ScoreKeeper</StatusBarItem>
             <Separator Style="{StaticResource MetroStatusBarSeparator}"></Separator>
