@@ -17,6 +17,7 @@ namespace Donut.UI
             builder.RegisterType<MainViewModel>().AsSelf();
 
             builder.RegisterType<ItemNavigationViewModel>().As<IItemNavigationViewModel>();
+            builder.RegisterType<ItemDetailViewModel>().As<IItemDetailViewModel>();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
             //builder.RegisterType<ItemsViewModel>().As<IItemsViewModel>(); 
 

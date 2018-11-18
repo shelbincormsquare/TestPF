@@ -28,10 +28,13 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
         <view:ItemNavigationView DataContext="{Binding ItemNavigationViewModel}"></view:ItemNavigationView>
-        <!--<TextBox Width="200" Text="{Binding ProcessDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+        <view:ItemDetailView Grid.Column="1" DataContext="{Binding ItemDetailViewModel}"></view:ItemDetailView>
 
 
         <!--<Controls:MetroAnimatedTabControl>
