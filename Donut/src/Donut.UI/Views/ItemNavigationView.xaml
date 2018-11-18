@@ -16,7 +16,6 @@
                          SelectedIndex="0"
                          Style="{StaticResource VirtualisedMetroListBox}" />
 
-        <TextBox Width="200" Text="{Binding ProcessDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </UserControl>

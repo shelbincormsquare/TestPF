@@ -9,22 +9,10 @@ namespace Donut.UI.ViewModels
         private IUnitOfWork _unitOfWork;
         public ObservableCollection<NavigationItemViewModel> Items { get; }
 
-        private string _processDate;
-        public string ProcessDate
-        {
-            get { return _processDate; }
-            set
-            {
-                _processDate = value;
-                OnPropertyChanged();
-            }
-        }
-
         public ItemNavigationViewModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
             Items = new ObservableCollection<NavigationItemViewModel>();
-            ProcessDate = "dsadsad";
         }
 
         public async Task LoadAsync()

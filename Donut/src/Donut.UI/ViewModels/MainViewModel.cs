@@ -7,29 +7,16 @@ namespace Donut.UI.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public IItemNavigationViewModel NavigationViewModel { get; }
-
         public MainViewModel(IItemNavigationViewModel itemNavigationViewModel)
         {
-            NavigationViewModel = itemNavigationViewModel;
-            ProcessDate = "dsadsad";
+            ItemNavigationViewModel = itemNavigationViewModel;
         }
+
+        public IItemNavigationViewModel  ItemNavigationViewModel { get; }
 
         public async Task LoadAsync()
         {
-            await NavigationViewModel.LoadAsync();
+            await ItemNavigationViewModel.LoadAsync();
         }
-
-        private string _processDate;
-        public string ProcessDate
-        {
-            get { return _processDate; }
-            set
-            {
-                _processDate = value;
-                OnPropertyChanged();
-            }
-        }
-
     }
 }
